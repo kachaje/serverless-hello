@@ -1,0 +1,16 @@
+service: aws-node-project
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  hello:
+    handler: handler.hello
+    name: HelloWorldFunction
+    architecture: x86_64
+
+plugins:
+  - serverless-offline
